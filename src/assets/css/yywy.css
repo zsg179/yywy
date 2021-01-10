@@ -1,0 +1,322 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.w,
+.tabs,
+.tip {
+  width: 17.325rem;
+  margin: 0 auto;
+}
+html {
+  font-size: 5.33333333vw;
+  background-color: #eff0f4;
+}
+.main,
+.info-wrapper,
+.profit-wrapper,
+.end-time {
+  width: 13.75rem;
+  background-color: #fff9f4;
+}
+.header {
+  width: 100%;
+  height: 8.75rem;
+  background-color: #bfa;
+}
+.header img {
+  width: 100%;
+}
+.tabs {
+  background-color: white;
+  border-radius: 10px;
+  margin: 0.5rem auto;
+}
+.tabs .van-tabs__wrap {
+  height: 100%;
+}
+.tabs .van-tab {
+  font-size: 0.625rem;
+  margin: 0 0.5rem;
+  border: none;
+  border-radius: 0.2rem;
+  color: #a7a7a7;
+  background-color: #f2f2f2;
+}
+.tabs .van-tab__text--ellipsis {
+  overflow: visible;
+}
+.tabs .van-tabs__wrap {
+  padding-top: 1rem;
+}
+.tabs .van-tab--active {
+  background-color: #f9a35b !important;
+  color: white;
+}
+.tabs .van-tabs__nav--card {
+  height: 1.5rem;
+  border: none;
+}
+.tip {
+  font-size: 0.625rem;
+  color: #333333;
+  text-align: center;
+  margin: 0.55rem 0;
+}
+.tip .tip-num {
+  color: #f49807;
+}
+.zn-main,
+.in-wrapper,
+.out-wrapper {
+  margin: 0 auto;
+  width: 15rem;
+  background-color: #fff9f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.in-wrapper .in {
+  width: 13.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.in-wrapper .in .in-title {
+  width: 5.75rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #333;
+}
+.in-wrapper .in .in-per-month {
+  height: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.in-wrapper .in .in-per-month .in-stepper .van-stepper {
+  display: flex;
+  justify-content: space-between;
+}
+.in-wrapper .in .in-per-month .in-stepper .van-stepper__minus,
+.in-wrapper .in .in-per-month .in-stepper .van-stepper__plus {
+  width: 1.125rem !important;
+  height: 1.125rem !important;
+  background-color: #0089fc;
+  border: none;
+  color: #fff;
+}
+.in-wrapper .in .in-per-month .in-stepper .van-stepper__input {
+  width: 2.25rem !important;
+  height: 1.125rem !important;
+  font-size: 0.875rem !important;
+  margin: 0;
+}
+.in-wrapper .in .in-per-month .in-stepper .van-stepper__minus--disabled {
+  color: #a6ceff;
+  border: none;
+}
+.in-wrapper .in .divider {
+  width: 1px;
+  height: 2rem;
+  background-color: #eee;
+}
+.in-wrapper .in .in-time {
+  height: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.in-wrapper .in .in-time .van-cell {
+  padding: 0;
+  font-size: 0.875rem;
+  border-radius: 0.55rem;
+  align-items: center;
+}
+.in-wrapper .in .in-time .van-cell .van-cell__right-icon {
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  height: 0.875rem;
+  margin-right: 0.25rem;
+  margin-left: 0;
+}
+.in-wrapper .in .in-time .in-time-picker {
+  width: 5rem;
+}
+.in-wrapper .in-total {
+  font-size: 0.625rem;
+  font-weight: 400;
+  color: #999;
+  margin: 0 0 0.5rem 0;
+}
+.in-wrapper .in-total .in-total-num {
+  color: #1f87fc;
+}
+.out-wrapper {
+  width: 13.75rem;
+  height: 3.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.out-wrapper .out-title {
+  font-size: 0.75rem;
+  color: #333;
+}
+.out-wrapper .out-num {
+  font-size: 1.375rem;
+  color: #f49807;
+}
+.out-wrapper .out-more {
+  font-size: 0.625rem;
+  font-weight: 400;
+  color: #999;
+}
+.out-wrapper .out-more-num {
+  color: #1f87fc;
+}
+.divider {
+  width: 100%;
+  height: 1px;
+  margin: 0.75rem 0;
+  background-color: #eee;
+}
+.info-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.sex-wrapper,
+.age-wrapper {
+  width: 6.25rem;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.sex-wrapper .info-label,
+.age-wrapper .info-label {
+  margin-right: 0.5rem;
+  font-size: 0.7rem;
+  color: #333;
+}
+.sex-wrapper .sex-picker,
+.age-wrapper .sex-picker,
+.sex-wrapper .age-picker,
+.age-wrapper .age-picker {
+  display: flex;
+  justify-content: center;
+  width: 3rem;
+  font-size: 0.7rem;
+}
+.sex-wrapper .sex-picker .van-cell,
+.age-wrapper .sex-picker .van-cell,
+.sex-wrapper .age-picker .van-cell,
+.age-wrapper .age-picker .van-cell {
+  width: 100%;
+  padding: 0;
+  font-size: 0.7rem;
+  border-radius: 0.55rem;
+  align-items: center;
+}
+.sex-wrapper .sex-picker .van-cell .van-cell__right-icon,
+.age-wrapper .sex-picker .van-cell .van-cell__right-icon,
+.sex-wrapper .age-picker .van-cell .van-cell__right-icon,
+.age-wrapper .age-picker .van-cell .van-cell__right-icon {
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  height: 0.875rem;
+  margin-right: 0.25rem;
+  margin-left: 0;
+}
+.sex-wrapper .age-unit,
+.age-wrapper .age-unit {
+  font-size: 0.7rem;
+  color: #333;
+}
+.age-wrapper {
+  justify-content: space-between;
+}
+.age-wrapper .info-label {
+  margin: 0;
+}
+.profit-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+  color: #333;
+  margin: 1rem 0;
+}
+.profit-wrapper .van-radio {
+  overflow: visible;
+}
+.profit-wrapper .van-radio-group--horizontal {
+  width: 100%;
+  justify-content: space-between;
+}
+.profit-wrapper .van-radio__icon {
+  font-size: inherit;
+}
+.end-time {
+  display: flex;
+  font-size: 0.7rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+.end-time .time-stepper .van-stepper__minus,
+.end-time .time-stepper .van-stepper__plus {
+  width: 1.125rem !important;
+  height: 1.125rem !important;
+  background-color: #0089fc;
+  border: none;
+  color: #fff;
+}
+.end-time .time-stepper .van-stepper__input {
+  width: 2rem !important;
+  height: 1.125rem !important;
+  font-size: 0.875rem !important;
+}
+.end-time .time-stepper .van-stepper__minus--disabled {
+  color: #a6ceff;
+  border: none;
+}
+.tabs .btn {
+  width: 15rem;
+  margin: 0 auto ;
+  padding-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tabs .btn .btn-share {
+  width: 3.75rem;
+  height: 1.625rem;
+  text-align: center;
+  line-height: 1.625rem;
+  color: #b96505;
+  font-size: 0.75rem;
+  font-weight: 300;
+  background: linear-gradient(left, #fcd3aa, #fcad6c);
+  border-radius: 0.8rem;
+}
+.tabs .btn .btn-next {
+  width: 10rem;
+  height: 1.625rem;
+  text-align: center;
+  line-height: 1.625rem;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 100;
+  background-color: #0089fc;
+  border-radius: 0.8rem;
+}
+.tabs .btn .van-overlay {
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: 50% 30%;
+  background-image: url("../img/poster.jpg");
+}

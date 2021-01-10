@@ -1,0 +1,404 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@total-width:750;
+@main-width:600;
+@inner-width:550;
+
+.w{
+    width: 693/40rem;
+    margin: 0 auto;
+}
+
+html{
+    font-size: 100vw/@total-width *40;
+    background-color: #eff0f4;
+}
+// 计算注界面
+.main{
+    width: @inner-width/40rem;
+    background-color: #fff9f4;
+}
+
+.header{
+    width: 100%;
+    height: 350/40rem;
+    background-color: #bfa;
+    img{
+        width: 100%;
+    }
+}
+
+.tabs:extend(.w){
+    background-color: white;
+    border-radius: 10px;
+    margin: 20/40rem auto;
+
+    .van-tabs__wrap{
+        height: 100%;
+    }
+
+    // .van-tabs__track{
+    //     transform: none !important;
+    // }
+
+    .van-tab{
+        font-size:25/40rem;
+        margin: 0 20/40rem ;
+        border: none;
+        border-radius: 8/40rem;
+        color: #a7a7a7;
+        background-color: #f2f2f2;
+    }
+    
+    // // tab样式
+    .van-tab__text--ellipsis{
+        overflow:visible;
+    }   
+    .van-tabs__wrap{
+        padding-top: 40/40rem;
+    }
+    .van-tab--active{
+        background-color: #f9a35b !important;
+        color: white;
+    }
+    .van-tabs__nav--card{
+        height: 60/40rem;
+        border: none;
+    }
+}
+
+.tip:extend(.w){
+    font-size: 25/40rem;
+    color: rgba(51, 51, 51, 1);
+    text-align: center;
+    margin: 22/40rem 0;
+    .tip-num{
+        color: rgba(244, 152, 7, 1);
+    }
+}
+
+//计算主界面
+.zn-main{
+    margin: 0 auto;
+    width: 600/40rem;
+    background-color: #fff9f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20/40rem;
+    margin-bottom: 20/40rem;
+}
+
+//投入区域页面
+.in-wrapper:extend(.zn-main){
+    //投入部分
+    .in{
+        width: 550/40rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20/40rem;
+
+        .in-title{
+            width: 230/40rem;
+            font-size: 30/40rem;
+            font-weight: 400;
+            color: #333;
+        }
+
+        //每月投入
+        .in-per-month{
+            height: 100/40rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+            //步进器
+            .in-stepper{
+
+                .van-stepper{
+                    display: flex;
+                    justify-content: space-between;
+                }
+                // 增减按钮
+                .van-stepper__minus,.van-stepper__plus{
+                    width: 45/40rem !important;
+                    height: 45/40rem !important;
+                    background-color: #0089fc;
+                    border: none;
+                    color: #fff;
+                }
+                // 内容
+                .van-stepper__input{
+                    width: 90/40rem !important;
+                    height: 45/40rem !important;
+                    font-size: 35/40rem !important;
+                    margin: 0;
+                }
+                // 按钮禁用
+                .van-stepper__minus--disabled{
+                    color: #a6ceff;
+                    border: none;
+                }
+            }
+        }
+
+        // 分割线
+        .divider{
+            width: 1px;
+            height: 80/40rem;
+            background-color: #eee;
+        }
+
+        //投入时间
+        .in-time{
+            height: 100/40rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .van-cell{
+                padding: 0;
+                font-size: 35/40rem;
+                border-radius: 22/40rem;
+                align-items: center;
+
+                .van-cell__right-icon{
+                    font-size: 35/40rem;
+                    line-height: 35/40rem;
+                    height: 35/40rem;
+                    margin-right: 10/40rem;
+                    margin-left: 0;
+                }
+            }
+
+            //时间下拉选择
+            .in-time-picker{
+                width: 200/40rem;
+            }
+        }
+    }
+
+    //投入总金额
+    .in-total{
+        font-size: 25/40rem;
+        font-weight: 400;
+        color: #999;
+        margin: 0 0 20/40rem 0;
+        
+        //数字
+        .in-total-num{
+            color: #1f87fc;
+        }
+    }
+}
+
+//到期总金额页面
+.out-wrapper:extend(.zn-main){
+    width: 550/40rem;
+    height: 150/40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    // 到期共领（元）
+    .out-title{
+        font-size: 30/40rem;
+        color: #333;
+    }
+
+    //到期领取金额
+    .out-num{
+        font-size: 55/40rem;
+        color: rgba(244, 152, 7, 1);
+    }
+
+    //多领
+    .out-more{
+        font-size: 25/40rem;
+        font-weight: 400;
+        color: #999;
+    }
+    //多领金额
+    .out-more-num{
+        color: #1f87fc;
+    }
+}
+
+//分割线
+.divider{
+    //width: 1px;
+    width: 100%;
+    height: 1px;
+    margin: 30/40rem 0;
+    background-color: #eee;
+}
+
+//客户信息
+.info-wrapper:extend(.main){
+    display: flex;
+    justify-content: space-between;
+}
+
+//性别，年龄
+.sex-wrapper,.age-wrapper{
+    width: 250/40rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    
+
+    //提示词
+    .info-label{
+        margin-right: 20/40rem;
+        font-size: 28/40rem;
+        color: #333;
+    }
+
+    //性别，年龄下拉选择
+    .sex-picker,.age-picker{
+        display: flex;
+        justify-content: center;
+        width: 120/40rem;
+        font-size: 28/40rem;
+
+        //下拉
+        .van-cell{
+            width: 100%;
+            padding: 0;
+            font-size: 28/40rem;
+            border-radius: 22/40rem;
+            align-items: center;
+
+            .van-cell__right-icon{
+                font-size: 35/40rem;
+                line-height: 35/40rem;
+                height: 35/40rem;
+                margin-right: 10/40rem;
+                margin-left: 0;
+            }
+        }
+    }
+
+    //年龄单位
+    .age-unit{
+        font-size: 28/40rem;
+        color: #333;
+    }
+}
+
+// 年龄样式
+.age-wrapper{
+    justify-content: space-between;
+    .info-label{
+        margin: 0;
+    }
+
+}
+
+//收益选择部分
+.profit-wrapper:extend(.main){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 28/40rem;
+    color: #333;
+    margin: 40/40rem 0;
+
+    .van-radio{
+        overflow: visible;
+       
+    }
+    
+    .van-radio-group--horizontal{
+        width: 100%;
+        justify-content: space-between;
+        
+    }
+
+    .van-radio__icon{
+        font-size: inherit;
+    }
+}
+
+// 领取时间
+.end-time:extend(.main){
+    display: flex;
+    font-size: 28/40rem;
+    color: #333;
+    margin-bottom: 20/40rem;
+
+    .time-stepper{
+        // 增减按钮
+        .van-stepper__minus,.van-stepper__plus{
+            width: 45/40rem !important;
+            height: 45/40rem !important;
+            background-color: #0089fc;
+            border: none;
+            color: #fff;
+        }
+        // 内容
+        .van-stepper__input{
+            width: 80/40rem !important;
+            height: 45/40rem !important;
+            font-size: 35/40rem !important;
+        }
+        // 按钮禁用
+        .van-stepper__minus--disabled{
+            color: #a6ceff;
+            border: none;
+        }
+    }
+}
+
+//按钮栏
+.tabs .btn{
+    width: @main-width/40rem;
+    margin: 0 auto ;
+    padding-bottom: 20/40rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    //分享按钮
+    .btn-share{
+        width: 150/40rem;
+        height: 65/40rem;
+        text-align: center;
+        line-height: 65/40rem;
+        color: rgb(185, 101, 5);
+        font-size: 30/40rem;
+        font-weight: 300;
+        background: linear-gradient(left,rgb(252, 211, 170),rgb(252, 173, 108));
+        border-radius: 32/40rem;
+    }
+    //提交按钮
+    .btn-next{
+        width: 400/40rem;
+        height: 65/40rem;
+        text-align: center;
+        line-height: 65/40rem;
+        color: white;
+        font-size: 30/40rem;
+        font-weight: 100;
+        background-color: #0089fc;
+        border-radius: 32/40rem;
+    }
+
+    //分享遮罩层
+    .van-overlay{
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position: 50% 30%;
+        background-image: url("../img/poster.jpg");
+    }
+}
+
+
+
